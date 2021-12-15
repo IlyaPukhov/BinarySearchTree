@@ -98,6 +98,26 @@ class BinarySearchTree<T : Comparable<T>> {
     за ней вершину по значению.
      */
 
+//    fun nextNode(value: T): BinaryNode<T>? {
+//        var node = root
+//        while (node != null) {
+//            if (value == node.value) {
+//                if (node.right != null) return node.right?.getMin()
+//                var parent = node.parent
+//                while (parent != null && node == parent.right) {
+//                    node = parent
+//                    parent = node.parent
+//                }
+//                return parent
+//            }
+//            node = if (value < node.value) {
+//                node.left
+//            } else {
+//                node.right
+//            }
+//        }
+//        return null
+//    }
     fun nextNode(value: T): T? {
         val list = getList(root)
         val nodeInd = list.binarySearch(value)
